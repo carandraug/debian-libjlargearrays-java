@@ -1,0 +1,5 @@
+libjlargearrays-java (1.6-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #867920)
+
+ -- Carnë Draug <carandraug+dev@gmail.com>  Mon, 10 Jul 2017 16:12:40 +0100

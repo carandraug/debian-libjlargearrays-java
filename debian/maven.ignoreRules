@@ -1,0 +1,4 @@
+org.apache.maven.plugins maven-gpg-plugin * * * *
+org.apache.maven.plugins maven-release-plugin * * * *
+org.apache.maven.plugins maven-source-plugin * * * *
+org.sonatype.plugins nexus-staging-maven-plugin * * * *

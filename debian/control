@@ -1,0 +1,50 @@
+Source: libjlargearrays-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Carnë Draug <carandraug+dev@gmail.com>
+Build-Depends: debhelper (>= 10), default-jdk, maven-debian-helper (>= 2.1)
+Build-Depends-Indep: default-jdk-doc,
+ libmaven-javadoc-plugin-java,
+ libmaven-shade-plugin-java,
+ libcommons-math3-java,
+ junit4,
+ libcommons-math3-java-doc
+Standards-Version: 4.0.0
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/libjlargearrays-java.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/libjlargearrays-java.git
+Homepage: https://gitlab.com/ICM-VisLab/JLargeArrays
+
+Package: libjlargearrays-java
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}
+Suggests: ${maven:OptionalDepends}, libjlargearrays-java-doc
+Description: Java library for one dimensional arrays up to 2^63 elements
+ Current implementations of Java Virtual Machines allow the creation of
+ one-dimensional arrays of length smaller than 2^31 elements.
+ JLargeArrays addresses the problem of maximal size of one-dimensional
+ Java arrays providing classes that can store up to 2^63 primitive
+ elements.
+ .
+ JLargeArrays provides the abstract class for primitive types, as well
+ as the non abstract classes for Number classes, String, bit values,
+ complex numbers, and objects.  It also supports subarrays.
+
+Package: libjlargearrays-java-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Recommends: ${maven:DocDepends}, ${maven:DocOptionalDepends}
+Suggests: libjlargearrays-java
+Description: documentation of libjlargearrays-java
+ Current implementations of Java Virtual Machines allow the creation of
+ one-dimensional arrays of length smaller than 2^31 elements.
+ JLargeArrays addresses the problem of maximal size of one-dimensional
+ Java arrays providing classes that can store up to 2^63 primitive
+ elements.
+ .
+ JLargeArrays provides the abstract class for primitive types, as well
+ as the non abstract classes for Number classes, String, bit values,
+ complex numbers, and objects.  It also supports subarrays.
+ .
+ This package contains the API documentation of libjlargearrays-java.
