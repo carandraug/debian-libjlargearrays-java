@@ -3,13 +3,15 @@ Section: java
 Priority: optional
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
 Uploaders: Carnë Draug <carandraug+dev@gmail.com>
-Build-Depends: debhelper (>= 10), default-jdk, maven-debian-helper (>= 2.1)
+Build-Depends: debhelper (>= 10)
 Build-Depends-Indep: default-jdk-doc,
+ default-jdk-headless,
+ junit4,
+ libcommons-math3-java,
+ libcommons-math3-java-doc,
  libmaven-javadoc-plugin-java,
  libmaven-shade-plugin-java,
- libcommons-math3-java,
- junit4,
- libcommons-math3-java-doc
+ maven-debian-helper (>= 2.1)
 Standards-Version: 4.0.0
 Vcs-Git: https://anonscm.debian.org/git/pkg-java/libjlargearrays-java.git
 Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/libjlargearrays-java.git
