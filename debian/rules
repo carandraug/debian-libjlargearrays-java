@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@
+	dh $@ --with javahelper
 
 get-orig-source:
 	uscan --download-current-version --force-download --no-symlink

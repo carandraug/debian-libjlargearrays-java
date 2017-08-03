@@ -6,6 +6,7 @@ Uploaders: Carnë Draug <carandraug+dev@gmail.com>
 Build-Depends: debhelper (>= 10)
 Build-Depends-Indep: default-jdk-doc,
  default-jdk-headless,
+ javahelper,
  junit4,
  libcommons-math3-java,
  libcommons-math3-java-doc,
