@@ -10,6 +10,7 @@ Build-Depends-Indep: default-jdk-doc,
  junit4,
  libcommons-math3-java,
  libcommons-math3-java-doc,
+ libmaven-compiler-plugin-java,
  libmaven-javadoc-plugin-java,
  libmaven-shade-plugin-java,
  maven-debian-helper (>= 2.1)
@@ -20,7 +21,8 @@ Homepage: https://gitlab.com/ICM-VisLab/JLargeArrays
 
 Package: libjlargearrays-java
 Architecture: all
-Depends: ${misc:Depends}, ${maven:Depends}
+Depends: ${misc:Depends}, ${java:Depends}, ${maven:Depends}
+Recommends: ${java:Recommends}
 Suggests: ${maven:OptionalDepends}, libjlargearrays-java-doc
 Description: Java library for one dimensional arrays up to 2^63 elements
  Current implementations of Java Virtual Machines allow the creation of
@@ -36,9 +38,8 @@ Description: Java library for one dimensional arrays up to 2^63 elements
 Package: libjlargearrays-java-doc
 Architecture: all
 Section: doc
-Depends: ${misc:Depends}
-Recommends: ${maven:DocDepends}, ${maven:DocOptionalDepends}
-Suggests: libjlargearrays-java
+Depends: ${misc:Depends}, ${maven:DocDepends}
+Suggests: ${maven:DocOptionalDepends}, libjlargearrays-java
 Description: documentation of libjlargearrays-java
  Current implementations of Java Virtual Machines allow the creation of
  one-dimensional arrays of length smaller than 2^31 elements.
